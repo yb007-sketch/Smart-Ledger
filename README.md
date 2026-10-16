@@ -14,13 +14,17 @@
 
 ---
 
-## 🌟 Overview
+## 🤖 Dual-Engine On-Device AI Architecture
 
-**SmartLedger** is a feature-rich, privacy-focused expense manager designed to replicate the classic multi-tab ledger workflow while integrating cutting-edge Android architecture, immersive frosted glass animations, multi-currency conversion, bulk Excel/CSV importing, and 100% offline local AI capabilities.
+SmartLedger features a smart, privacy-first **Dual-Engine AI System** that automatically adapts to your phone's hardware capabilities:
+
+* **🚀 Google AICore (Gemini Nano):** On supported devices with dedicated hardware accelerators (such as recent Google Pixel and Samsung Galaxy flagships), the app uses native Android AICore for instantaneous, zero-download text parsing, smart categorization, and receipt OCR.
+* **📥 LiteRT-LM Local Model Fallback:** On unsupported phone models (such as Xiaomi, Motorola, OnePlus, and older devices without built-in AICore), the app seamlessly falls back to **Google AI Edge LiteRT-LM**. It prompts the user to download a lightweight, open-source quantized model (**Gemma-3-1B-IT** or **Gemma-3n-E2B** ~750MB–1.2GB) directly into local storage.
+* **⚡ GPU Acceleration:** The local model runs entirely offline with hardware GPU acceleration (`libOpenCL.so`), supporting native Kotlin function calling (`@Tool`) for natural language expense logging and zero cloud data transmission.
 
 ---
 
-## 🚀 Key Features & Architecture
+## 🌟 Core Features & Architecture
 
 ### 🎨 Material 3 Expressive & Frosted Glass UI
 - **Glassmorphism Design System:** Built over a deep ambient mesh gradient with dynamic backdrop blur (`Modifier.frostedGlass()`), translucent surface fills (`alpha = 0.68f`), and subtle specular borders.
@@ -30,11 +34,6 @@
 - **5 Transaction Sub-Tabs:** **Daily** (grouped by date with sticky day headers and daily subtotals), **Calendar** (full month grid with cell totals), **Monthly**, **Total**, and **Note**.
 - **Visual Analytics Canvas:** Custom Jetpack Compose Canvas Donut & Pie Charts with smooth animations, external callout leader lines, and ranked percentage breakdown badges.
 - **Custom Docked Picker:** Fast 3-column grid input system replacing rigid keyboards for accounts (`CASH`, `DebitCard`, `AMEX`) and categories (`Grocery`, `Transportation`, `Apparel`, etc.).
-
-### 🤖 On-Device Android AI Hub (Dual-Engine)
-- **Zero-Cloud Privacy:** Automatically routes requests to **Google AICore (Gemini Nano)** on supported devices, or downloads an open-source model (**Gemma-3-1B / Gemma-3n** via **Google AI Edge LiteRT-LM**) with GPU acceleration (`libOpenCL.so`) on non-AICore devices.
-- **Natural Language & Voice Parsing:** Instantly parses phrases like *"Spent £31.51 on petrol with AMEX"* into structured transaction drafts using native Kotlin function calling (`@Tool`).
-- **Multimodal Receipt OCR:** Captures and scans physical receipts via ML Kit Document Scanner to auto-fill merchant notes, dates, and amounts.
 
 ### 📂 Bulk Import, Export & 24-Hour Rollback
 - **Multi-Format Spreadsheet Engine:** Supports `.csv`, `.xls`, and `.xlsx` files using Apache POI.
@@ -67,7 +66,7 @@
 - **Local Storage:** Room Database (with KSP, SQLCipher encryption support, and WAL mode).
 - **Preferences:** Jetpack DataStore (Proto & Preferences).
 - **Async & Background:** Kotlin Coroutines & Flow + WorkManager.
-- **AI & ML:** Google AI Edge LiteRT-LM + ML Kit Document Scanner & Prompt APIs.
+- **AI & ML:** Google AI Edge LiteRT-LM + Google AICore & ML Kit Document Scanner.
 - **Spreadsheets:** Apache POI (`poi-ooxml`) for native `.xlsx` & `.xls` parsing on Android.
 - **Diagnostics:** Timber (PII-redacted ring-buffer logger) + Jetpack Tracing.
 
