@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="54"
+        android:pivotY="54">
+        <!-- Main Ledger Book Shadow / Base -->
+        <path
+            android:fillColor="#0D9488"
+            android:pathData="M32,29 C32,26.8 33.8,25 36,25 L72,25 C74.2,25 76,26.8 76,29 L76,79 C76,81.2 74.2,83 72,83 L36,83 C33.8,83 32,81.2 32,79 Z" />
+
+        <!-- Book Cover Top Gradient Layer (Emerald Green) -->
+        <path
+            android:fillColor="#10B981"
+            android:pathData="M34,27 C34,25.9 34.9,25 36,25 L72,25 C73.1,25 74,25.9 74,27 L74,77 C74,78.1 73.1,79 72,79 L36,79 C34.9,79 34,78.1 34,77 Z" />
+
+        <!-- Ledger Spine Accent Strip -->
+        <path
+            android:fillColor="#065F46"
+            android:pathData="M34,25 L40,25 L40,79 L34,79 Z" />
+
+        <!-- Bookmark Ribbon (Coral Red accent) -->
+        <path
+            android:fillColor="#FF5252"
+            android:pathData="M60,24 L68,24 L68,40 L64,36 L60,40 Z" />
+
+        <!-- Inner Ledger Page Lines (White translucent) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M46,42 L66,42 A2,2 0,0,0 66,38 L46,38 A2,2 0,0,0 46,42 Z" />
+
+        <!-- Growth Trend Arrow (Financial Growth Upward) -->
+        <path
+            android:fillColor="#34D399"
+            android:pathData="M46,65 L52,58 L58,62 L67,51 L67,56 A1.5,1.5 0,0,0 70,56 L70,47 A1.5,1.5 0,0,0 68.5,45.5 L59.5,45.5 A1.5,1.5 0,0,0 59.5,48.5 L64.5,48.5 L57.5,57 L51.5,53 L44,61.5 A2,2 0,0,0 46,65 Z" />
+
+        <!-- Floating Golden Coin / Currency Emblem -->
+        <path
+            android:fillColor="#FBBF24"
+            android:pathData="M48,50 A5,5 0,1,0 48,40 A5,5 0,1,0 48,50 Z" />
+        <path
+            android:fillColor="#D97706"
+            android:pathData="M48,48 A3,3 0,1,0 48,42 A3,3 0,1,0 48,48 Z" />
+    </group>
+</vector>

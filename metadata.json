@@ -1,0 +1,6 @@
+{
+  "name": "SmartLedger",
+  "description": "Modern personal finance, budgeting, and money management with frosted glass UI, analytics, and smart AI quick entry",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
